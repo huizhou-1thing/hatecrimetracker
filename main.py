@@ -83,6 +83,21 @@ def _getCommonArgs():
     return dateparser.parse(start), dateparser.parse(end), state
 
 
+def create_incident():
+    # _check_is_admin(request)
+    pass
+
+
+def publish_incidents():
+    # header = request.headers.get("X-CloudScheduler", None)
+    # if not header:
+    #     raise ValueError(
+    #         "attempt to access cloud scheduler handler directly, "
+    #         "missing custom X-CloudScheduler header"
+    #     )
+    pass
+
+
 @app.route("/")
 def root():
     start, end, state = _getCommonArgs()
@@ -229,4 +244,7 @@ if __name__ == "__main__":
     # http://flask.pocoo.org/docs/1.0/quickstart/#static-files. Once deployed,
     # App Engine itself will serve those files as configured in app.yaml.
 
-    app.run(host="127.0.0.1", port=8081, debug=True, threaded=True)
+    # app.run(host="127.0.0.1", port=8081, debug=True, threaded=True)
+    app.run(host="192.168.0.12", port=8081, debug=True)
+    app.run(host="192.168.0.12", port=8082, debug=True)
+    # run on actual IP address

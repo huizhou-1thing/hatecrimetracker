@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Run server code against local firebase simulator
 python3.9 -m venv env
